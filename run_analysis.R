@@ -32,6 +32,7 @@ ActivitiesLabel<-read.table(file.path(pathIn,"activity_labels.txt"))
 
 ## Task 1: Merge the Training and the Test data into one data set ##
 ##Combine Subjects data and name variables properly
+library(dplyr)
 subjData <- rbind(SubjTrainDt, SubjTestDt)
 names(subjData)
 SubjectData<-rename(subjData,subject_id=V1)
